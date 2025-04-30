@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -61,18 +62,21 @@
       color: #38bdf8;
       margin-bottom: 1rem;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+    .swiper {
+      width: 100%;
+      padding-bottom: 3rem;
     }
-    .card {
+    .swiper-slide {
       background: #1e293b;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transition: transform 0.3s;
     }
-    .card:hover {
+    .swiper-slide:hover {
       transform: translateY(-5px);
       box-shadow: 0 0 0 3px #38bdf8;
     }
@@ -87,8 +91,8 @@
       header h1 {
         font-size: 2rem;
       }
-      .card {
-        padding: 1rem;
+      .swiper-slide {
+        padding: 1.2rem;
       }
     }
   </style>
@@ -112,19 +116,27 @@
 
     <section data-aos="fade-up">
       <h2>Projetos</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>🐾 VetCare</h3>
-          <p>Sistema para gestão de clínicas veterinárias com autenticação e cadastro de pets.</p>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3>🐾 VetCare</h3>
+            <p>Sistema para gestão de clínicas veterinárias com autenticação e cadastro de pets.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>☀️ DimaSun</h3>
+            <p>Plataforma inteligente para recomendação de empresas de energia solar.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>📞 Call Center (Twisted)</h3>
+            <p>Central de atendimento com arquitetura assíncrona usando Python e filas de chamadas.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>🦷 ReDonto</h3>
+            <p>Aplicativo voltado para pronto atendimento na área de odontologia</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>☀️ DimaSun</h3>
-          <p>Plataforma inteligente para recomendação de empresas de energia solar.</p>
-        </div>
-        <div class="card">
-          <h3>📞 Call Center (Twisted)</h3>
-          <p>Central de atendimento com arquitetura assíncrona usando Python e filas de chamadas.</p>
-        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -139,8 +151,25 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
   <script>
     AOS.init();
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
+    });
   </script>
 </body>
 </html>
