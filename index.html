@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -80,6 +81,36 @@
       transform: translateY(-5px);
       box-shadow: 0 0 0 3px #38bdf8;
     }
+    .tech-category {
+      margin-bottom: 2rem;
+    }
+    .tech-category h3 {
+      font-size: 1.2rem;
+      color: #7dd3fc;
+      margin-bottom: 0.75rem;
+    }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .tech-grid span {
+      background: #1e293b;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #f1f5f9;
+      transition: background 0.3s;
+    }
+    .tech-grid span i, .tech-grid span img {
+      height: 1.2rem;
+    }
+    .tech-grid span:hover {
+      background: #334155;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -132,17 +163,53 @@
           </div>
           <div class="swiper-slide">
             <h3>🦷 ReDonto</h3>
-            <p>Aplicativo voltado para pronto atendimento na área de odontologia</p>
+            <p>Aplicativo voltado para pronto atendimento na área de odontologia, com foco em agilidade e registro eficiente de pacientes e procedimentos.</p>
           </div>
         </div>
-        <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
       </div>
     </section>
 
     <section data-aos="fade-up">
       <h2>Tecnologias</h2>
-      <p>Node.js, TypeScript, HTML, CSS, JavaScript, MongoDB, Supabase, Kotlin, Firebase, Linux.</p>
+
+      <div class="tech-category">
+        <h3>Frontend</h3>
+        <div class="tech-grid">
+          <span title="HTML5 para estruturação de páginas"><i class="devicon-html5-plain colored"></i>HTML</span>
+          <span title="CSS3 para estilização e responsividade"><i class="devicon-css3-plain colored"></i>CSS</span>
+          <span title="JavaScript para lógica no frontend"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3>Backend</h3>
+        <div class="tech-grid">
+          <span title="TypeScript para aplicações frontend modernas"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+          <span title="Node.js para desenvolvimento backend em JavaScript"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+          <span title="Kotlin para APIs modernas e Android"><i class="devicon-kotlin-plain colored"></i>Kotlin</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3>Banco de Dados & Cloud</h3>
+        <div class="tech-grid">
+          <span title="MongoDB como banco de dados NoSQL"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+          <span title="Supabase como backend as a service"><i class="devicon-supabase-plain colored"></i>Supabase</span>
+          <span title="Firebase para autenticação e realtime DB"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+        </div>
+      </div>
+
+      <div class="tech-category">
+        <h3>Outros</h3>
+        <div class="tech-grid">
+          <span title="Sistema de controle de versão distribuído"><i class="devicon-git-plain colored"></i>Git</span>
+          <span title="Plataforma de desenvolvimento colaborativo que aloja projetos na nuvem utilizando o sistema de controle de versões chamado Git"><i class="devicon-github-original"></i>GitHub</span>
+          <span title="Linux como sistema operacional de desenvolvimento"><i class="devicon-linux-plain colored"></i>Linux</span>
+          <span title="Windows como sistema operacional de desenvolvimento"><i class="devicon-windows11-original"></i>Windows</span>  
+        </div>
+      </div>
+
     </section>
   </main>
 
