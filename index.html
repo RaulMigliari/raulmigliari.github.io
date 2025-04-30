@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raul Migliari | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: #f1f5f9;
+      background: #1e293b;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #334155;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 0 3px #38bdf8;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #1e293b;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Raul Migliari</h1>
+    <p>Desenvolvedor Full Stack • Engenharia de Software</p>
+    <div class="social-links">
+      <a href="mailto:raulmigliari5@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://www.linkedin.com/in/raulmigliari/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/RaulMigliari" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section data-aos="fade-up">
+      <h2>Sobre mim</h2>
+      <p>Sou um entusiasta de tecnologia e desenvolvimento de software, atualmente no último ano de Engenharia de Software. Tenho experiência prática com projetos reais utilizando tecnologias como Node.js, MongoDB, Supabase, TypeScript, Kotlin e Firebase.</p>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Projetos</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>🐾 VetCare</h3>
+          <p>Sistema para gestão de clínicas veterinárias com autenticação e cadastro de pets.</p>
+        </div>
+        <div class="card">
+          <h3>☀️ DimaSun</h3>
+          <p>Plataforma inteligente para recomendação de empresas de energia solar.</p>
+        </div>
+        <div class="card">
+          <h3>📞 Call Center (Twisted)</h3>
+          <p>Central de atendimento com arquitetura assíncrona usando Python e filas de chamadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Tecnologias</h2>
+      <p>Node.js, TypeScript, HTML, CSS, JavaScript, MongoDB, Supabase, Kotlin, Firebase, Linux.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Raul Migliari. Todos os direitos reservados.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
